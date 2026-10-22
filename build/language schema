@@ -1,0 +1,12 @@
+,
+  "sg-app": {
+    "grid": {
+      "add_to_cart_text": "add to cart",
+      "adding_text": "adding...",
+      "show_options_txt": "Show Options",
+      "hide_options_txt": "Hide Options",
+      "sold_out_txt": "Sold Out",
+      "product_view_txt": "View Product",
+      "out_of_stock_txt": "Out Of Stock"
+    }
+  }

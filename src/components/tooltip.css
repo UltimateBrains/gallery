@@ -1,0 +1,112 @@
+.Tooltip {
+    position: relative;
+    display: inline-flex;
+}
+
+.Tooltip__toggler:hover {
+    cursor: pointer;
+}
+
+.Tooltip__message {
+    position: relative;
+    border-radius: 4px;
+    background: white;
+    padding: 1.25rem 1.25rem;
+    white-space: pre;
+    text-decoration: none;
+    z-index: 2000;
+    color: black;
+    font-size: 1.325rem;
+}
+
+.Tooltip__message::after {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    content: '';
+    position: absolute;
+    z-index: 3000;
+}
+
+.Tooltip__message--top {
+    bottom: 100%;
+    box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 7px;
+    position: absolute;
+    transform: translate(-48%);
+}
+
+.Tooltip__message--top::after {
+    border-top-color: white;
+    border-bottom: none;
+    bottom: -6px;
+    left: 49%;
+    margin-bottom: 0;
+}
+
+.Tooltip__message--bottom {
+    top: 100%;
+    transform: translate(-50%);
+    margin-top: 12px;
+    position: absolute;
+    box-shadow: 0 -0.5rem 1.5rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.Tooltip__message--bottom::after {
+    border-bottom-color: white;
+    border-top: none;
+    top: -6px;
+    left: 48%;
+    margin-top: 0;
+}
+
+.Tooltip__message--right {
+    top: 50%;
+    left: 100%;
+    margin-left: 12px;
+    position: absolute;
+    box-shadow: -0.5rem 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.Tooltip__message--right::after {
+    border-right-color: white;
+    border-left: none;
+    top: 50%;
+    margin-top: -3px;
+    left: -6px;
+}
+
+.Tooltip__message--left {
+    top: 50%;
+    right: 100%;
+    margin-right: 12px;
+    position: absolute;
+    box-shadow: 0.5rem 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.Tooltip__message--left::after {
+    border-left-color: white;
+    border-right: none;
+    top: 50%;
+    margin-top: -3px;
+    right: -6px;
+}
+
+.Tooltip-enter {
+    opacity: 0;
+}
+
+.Tooltip-enter-active {
+    transition: all 200ms;
+    opacity: 1;
+    max-height: 30rem;
+}
+
+.Tooltip-exit {
+    opacity: 1;
+}
+
+.Tooltip-exit-active {
+    transition: all 200ms;
+    opacity: 0;
+}
